@@ -3,6 +3,9 @@
  * Copyright 2013-2017 Palino
  * Licensed under  ()
  */
+.first-content {
+  margin-top: 100px;
+}
 body {
   width: 100%;
   height: 100%;
