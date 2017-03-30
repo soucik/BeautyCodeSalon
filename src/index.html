@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BeautyCode Salon</title>
-    <base href=".">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
+<head>
+  <title>BeautyCode Salon</title>
+  <base href=".">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <!-- Polyfill(s) for older browsers -->
+  <script src="node_modules/core-js/client/shim.min.js"></script>
 
-    <script src="systemjs.config.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+  <script src="systemjs.config.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.js"></script>
 
-    <script>
-      System.import('main.js').catch(function(err){ console.error(err); });
-    </script>
 
-	<!-- Bootstrap Core CSS -->
-	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+<!--<script src="node_modules/ng2-bootstrap/bundles/ng2-bootstrap.umd.min.js"></script>-->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/ng2-bootstrap/3.3.7/ng2-bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
 
-	<!-- Custom Fonts -->
-	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <script>
+    System.import('main.js').catch(function (err) { console.error(err); });
+  </script>
 
-	<!-- Theme CSS -->
-	<link href="css/grayscale.css" rel="stylesheet">
+  <!-- Bootstrap Core CSS -->
+  <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
 
-  </head>
+  <!-- Custom Fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-  <body>
-    <my-app>The Beauty Code</my-app>
-  </body>
+  <!-- Theme CSS -->
+  <link href="css/grayscale.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <my-app>The Beauty Code</my-app>
+</body>
+
 </html>
