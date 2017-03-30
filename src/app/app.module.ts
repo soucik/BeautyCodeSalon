@@ -5,11 +5,15 @@ import { AppComponent }  from './app.component';
 import { HomeComponent }   from './Home/home.component';
 import { PricesComponent }   from './Prices/prices.component';
 
-import { AppRoutingModule }     from './app-routing.module';
+import { AppRoutingModule }  from './app-routing.module';
+
+//other libs
+import {  AgmCoreModule} from 'angular2-google-maps/core';
 
 @NgModule({
   imports:      [ BrowserModule,
-                  AppRoutingModule
+                  AppRoutingModule,
+                  AgmCoreModule.forRoot()
                   ],
   declarations: [ AppComponent,
                   HomeComponent,

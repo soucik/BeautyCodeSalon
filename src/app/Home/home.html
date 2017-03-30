@@ -1,32 +1,24 @@
 <div class="container first-content" id="header">
     <div class="row">
-        <div class="col-md-12 custom-bg" style="height: 500px">
+        <div class="col-md-12 custom-bg">
             <div id="headingCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#headingCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#headingCarousel" data-slide-to="1"></li>
                     <li data-target="#headingCarousel" data-slide-to="2"></li>
-                    <li data-target="#headingCarousel" data-slide-to="3"></li>
-                    <li data-target="#headingCarousel" data-slide-to="4"></li>
                 </ol>
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
-                    <div class="item active" style="height: 500px">
+                    <div class="item active">
                         <img src="img/slide-0.jpg" alt="Hairdresser" class="img-carousel" style="margin-left: 9%">
                     </div>
-                    <div class="item" style="height: 500px">
-                        <img src="./img/slide-1.jpg" alt="Flower" class="img-carousel" style="margin-left: 9%">
+                    <div class="item">
+                        <img src="./img/slide-1.jpg" alt="Lashes" class="img-carousel" style="margin-left: 9%">
                     </div>
-                    <!--<div class="item" style="width:100%; height:100%">
-                        <img src="./img/slide-2.jpg" alt="Flower" class="img-carousel">
+                    <div class="item">
+                        <img src="./img/slide-2.jpg" alt="Nails" class="img-carousel">
                     </div>
-                    <div class="item" style="width:100%; height:100%">
-                        <img src="./img/slide-3.jpg" alt="Flower" class="img-carousel">
-                    </div>
-                    <div class="item" style="width:100%; height:100%">
-                        <img src="./img/slide-4.jpg" alt="Flower" class="img-carousel">
-                    </div>-->
                 </div>
 
                 <!-- Left and right controls -->
@@ -42,55 +34,60 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-10 col-md-offset-1 text-center custom-bg first-content last-content">
-            <h1><span style="color:darkred">newly</span> opened</h1>
-            <h2>Helmond Salon</h2>
+        <div class="col-md-10 col-md-offset-1 text-center custom-bg first-content">
+            <h1 id="color-stylish-red">Salon in Helmond</h1>
             <h2>Hairdresser's, Nails and Lashes</h2>
+            <h2>newly opened</h2>
             <a href="home#contact" class="btn btn-circle page-scroll">
                 <i class="fa fa-angle-double-down animated"></i>
             </a>
         </div>
     </div>
 </div>
-<div class="container" id="contact" style="padding-top: 120px">
+<div class="container first-content" id="contact">
     <div class="row" style="min-height: 400px">
         <div class="col-md-4 custom-bg text-center" id="address">
             <div style="min-height: 400px">
                 <!-- Map Section -->
                 <!--<div id="map"></div>-->
-                <h3><span style="color:darkred">Opened Dayly</span></h3>
-                <h3>9:00&nbsp;AM&nbsp;-&nbsp;6:00&nbsp;PM</h3>
-                <h3><span style="color:darkred">Friday</span> 9:00&nbsp;AM&nbsp;-&nbsp;9:00&nbsp;PM</h3>
-                <h3><span style="color:darkred">Sunday</span> Closed</h3>
+                <h3>Opening</h3>
+                <h4 id="context">Dayly 9:00&nbsp;AM&nbsp;-&nbsp;6:00&nbsp;PM</h4>
+                <h4 id="context">Friday 9:00&nbsp;AM&nbsp;-&nbsp;9:00&nbsp;PM</h4>
+                <h4 id="context">Sunday Closed</h4>
                 <hr>
-                <h4>BEAUTY CODE</h4>
-                <h4>MOLENSTRAAT 192</h4>
-                <h4>5701KL</h4>
-                <h4>HELMOND</h4>
-
-
+                <h3>Address</h3>
+                <h4 id="context">BEAUTY CODE</h4>
+                <h4 id="context">MOLENSTRAAT 192</h4>
+                <h4 id="context">5701KL</h4>
+                <h4 id="context">HELMOND</h4>
             </div>
         </div>
         <div class="col-md-6 col-md-offset-1 custom-bg" id="googleMap">
-            <div style="height: 400px" id="map">
+            <div class="container" id="map" style="height: 430px; padding-top: 15px; padding-bottom: 15px; margin-top: auto">
 
-                <!-- Map Section -->
-                <!--<div id="map"></div>-->
+                <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
+                    <sebm-google-map-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat"
+                        [longitude]="m.lng" [label]="m.label" [markerDraggable]="m.draggable">
+                        <sebm-google-map-info-window>
+                            <strong>Salon BeautyCode</strong>
+                        </sebm-google-map-info-window>
+                    </sebm-google-map-marker>
+                </sebm-google-map>
 
             </div>
         </div>
     </div>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1 text-center custom-bg">
+        <a href="home#header" class="btn btn-circle page-scroll">
+            <i class="fa fa-angle-double-up animated"></i>
+        </a>
+    </div>
+</div>
+<footer>
     <div class="row">
-        <div class="col-md-10 col-md-offset-1 text-center custom-bg last-content">
-            <a href="home#header" class="btn btn-circle page-scroll">
-                <i class="fa fa-angle-double-up animated"></i>
-            </a>
+        <div class="col-md-12 text-center custom-bg about-author">
+            <p>Copyright Palino &copy; 2017</p>
         </div>
     </div>
-    <footer>
-        <div class="row">
-            <div class="col-md-12 text-center custom-bg about-author">
-                <p>Copyright Palino &copy; 2017</p>
-            </div>
-        </div>
-    </footer>
+</footer>
