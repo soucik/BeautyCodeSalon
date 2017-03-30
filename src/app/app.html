@@ -1,36 +1,38 @@
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a routerLink="homeB#contact" routerLinkActive="active" class="navbar-brand page-scroll logo">
-                    <!--<span class="light textWhite"> -->
-                      <img width ="210px"  src="img/label-1.png"> 
-                      
-                      <!--Beauty</span><span class="textRed">Code</span>-->
-                </a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li> 
-                        <a routerLink="home#contact" routerLinkActive="active" class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a routerLink="/prices" routerLinkActive="active" class="page-scroll" href="#download">Prices</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" routerLinkActive="active" href="#contact">Gallery</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+            <a routerLink="home" routerLinkActive="active" class="navbar-brand page-scroll logo">
+
+                <img width="210px" src="img/label-1.png">
+
+            </a>
         </div>
-        <!-- /.container -->
-    </nav>
-    <router-outlet></router-outlet>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a [routerLink]="['home']" href="#header" pageScroll routerLinkActive="active" class="page-scroll">Home</a>
+                </li>
+                <li>
+                    <a [routerLink]="['home']" href="#contact" pageScroll routerLinkActive="active" class="page-scroll">Contact</a>
+                </li>
+                <li>
+                    <a routerLink="prices" routerLinkActive="active" class="page-scroll">Prices</a>
+                </li>
+                <li>
+                    <a routerLink="galery" routerLinkActive="active" class="page-scroll">Gallery</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<router-outlet></router-outlet>
