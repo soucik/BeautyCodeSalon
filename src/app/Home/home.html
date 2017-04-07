@@ -66,8 +66,8 @@
             <div class="container" id="map" style="height: 430px; padding-top: 15px; padding-bottom: 15px; margin-top: auto">
 
                 <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
-                    <sebm-google-map-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat"
-                        [longitude]="m.lng" [label]="m.label" [markerDraggable]="m.draggable">
+                    <sebm-google-map-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng" [label]="m.label"
+                        [markerDraggable]="m.draggable">
                         <sebm-google-map-info-window>
                             <strong>Salon BeautyCode</strong>
                         </sebm-google-map-info-window>
@@ -77,10 +77,11 @@
             </div>
         </div>
     </div>
-<div class="row">
-    <div class="col-md-10 col-md-offset-1 text-center custom-bg">
-        <a href="home#header" class="btn btn-circle page-scroll">
-            <i class="fa fa-angle-double-up animated"></i>
-        </a>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center custom-bg">
+            <a href="home#header" class="btn btn-circle page-scroll">
+                <i class="fa fa-angle-double-up animated"></i>
+            </a>
+        </div>
     </div>
 </div>
