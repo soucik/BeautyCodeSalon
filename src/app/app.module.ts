@@ -15,7 +15,7 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
 @NgModule({
   imports:      [ BrowserModule,
                   AppRoutingModule,
-                  AgmCoreModule.forRoot(),
+                  AgmCoreModule.forRoot({apiKey: 'AIzaSyBgTXzwwXAEZ65MlwJ-W1S7deIeBY81NbA'}),
                   Ng2PageScrollModule.forRoot()
                   ],
   declarations: [ AppComponent,

@@ -1,6 +1,6 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "workbench.iconTheme": "vs-minimal",
     "files.exclude": {
         "**/.git": true,

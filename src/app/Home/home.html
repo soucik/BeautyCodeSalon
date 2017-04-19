@@ -60,17 +60,17 @@
                 <h4 id="context">MOLENSTRAAT 192</h4>
                 <h4 id="context">5701KL</h4>
                 <h4 id="context">HELMOND</h4>
+                <hr>
+                <h3>Phone</h3>
+                <h4 id="context">+31 6 19055057</h4>
             </div>
         </div>
         <div class="col-md-6 col-md-offset-1 custom-bg" id="googleMap">
             <div class="container" id="map" style="height: 430px; padding-top: 15px; padding-bottom: 15px; margin-top: auto">
 
-                <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
+                <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="true">
                     <sebm-google-map-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng" [label]="m.label"
                         [markerDraggable]="m.draggable">
-                        <sebm-google-map-info-window>
-                            <strong>Salon BeautyCode</strong>
-                        </sebm-google-map-info-window>
                     </sebm-google-map-marker>
                 </sebm-google-map>
 

@@ -27,7 +27,7 @@ export class HomeComponent {
 	  {
 		  lat: 51.478879,
 		  lng: 5.658821,
-		  label: '',
+		  label: 'Salon',
 		  draggable: false
 	  }
   ]
