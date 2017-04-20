@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-  selector: 'galery',
-  templateUrl: './app/Galery/galery.html'
+  selector: 'gallery',
+  templateUrl: './app/Gallery/gallery.html'
 })
-export class GaleryComponent {
+export class GalleryComponent {
 
   imgPath: string = './img/gallery/';
   images4x3Src: Array<string> = [];
