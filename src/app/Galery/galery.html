@@ -1,7 +1,17 @@
 <div class="container first-content" id="gallery-header">
-    <div class="row">
-        <div class="col-md-12 text-center custom-bg">
-            <h1>Webpage is under reconstruction</h1>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-md-12 text-center custom-bg">
+			<h1>Gallery</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 text-center custom-bg" *ngFor="let imageSrc of images4x3Src; let i=index">
+			<img src={{imageSrc}} class="img-responsive">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 text-center custom-bg" *ngFor="let imageSrc of images3x4Src; let i=index">
+			<img src={{imageSrc}} class="img-responsive">
+		</div>
+	</div>
 </div>
