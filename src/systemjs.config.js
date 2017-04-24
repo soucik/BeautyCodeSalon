@@ -4,6 +4,8 @@
  */
 (function (global) {
   System.config({
+    baseURL: "./",
+    defaultJSExtensions: true,
     paths: {
       // paths serve as alias
       'npm:': 'node_modules/'
@@ -30,6 +32,8 @@
       //custom libs
       'angular2-google-maps/core': 'npm:angular2-google-maps/core/core.umd.js',
       'ng2-page-scroll': 'npm:ng2-page-scroll/bundles/ng2-page-scroll.umd.js',
+      'jquery': "npm:jquery/dist/jquery.min.js",
+      'bootstrap': "npm:bootstrap/dist/js/bootstrap.min.js",
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {

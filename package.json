@@ -31,7 +31,8 @@
     "test": "concurrently \"npm run build:watch\" \"karma start karma.conf.js\"",
     "pretest:once": "npm run build",
     "test:once": "karma start karma.conf.js --single-run",
-    "lint": "tslint ./src/**/*.ts -t verbose"
+    "lint": "tslint ./src/**/*.ts -t verbose",
+    "production": "tsc -p src/ && gulp production"
   },
   "dependencies": {
     "@agm/core": "^1.0.0-beta.0",
@@ -50,8 +51,8 @@
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",
     "zone.js": "^0.8.4",
-    "jquery":"3.2.1",
-    "bootstrap":"3.3.7"
+    "jquery": "3.2.1",
+    "bootstrap": "3.3.7"
   },
   "devDependencies": {
     "@types/jasmine": "2.5.36",
@@ -61,14 +62,16 @@
     "concurrently": "^3.2.0",
     "gulp": "^3.9.1",
     "gulp-angular2": "^0.1.3",
+    "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.0.10",
     "gulp-concat": "2.6.1",
     "gulp-header": "^1.8.7",
     "gulp-less": "^3.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-series": "1.0.2",
+    "gulp-typescript": "",
     "gulp-uglify": "^1.5.4",
-    "gulp-typescript":"",
-    "systemjs-builder":"0.16.4",
+    "run-sequence": "1.2.2",
     "jasmine-core": "~2.4.1",
     "karma": "^1.3.0",
     "karma-chrome-launcher": "^2.0.0",
@@ -79,6 +82,7 @@
     "lodash": "^4.16.4",
     "protractor": "~4.0.14",
     "rimraf": "^2.5.4",
+    "systemjs-builder": "0.16.4",
     "tslint": "^3.15.1",
     "typescript": "~2.1.0"
   }
