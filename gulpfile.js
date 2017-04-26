@@ -131,6 +131,8 @@ gulp.task('copy-html', function() {
 gulp.task('copy-img', function() {
   gulp.src('./src/img/**', {base: './src'})
   .pipe(gulp.dest('./out'));
+  gulp.src('./src/favicon.ico', {base: './src'})
+  .pipe(gulp.dest('./out'));
 });
 
 gulp.task('copy-css', function() {

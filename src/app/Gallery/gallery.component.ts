@@ -18,13 +18,13 @@ export class GalleryComponent {
   
   public set4x3Images() {
     for (var i = 1; i <= 4; i++) {
-      this.images4x3Src.push(this.imgPath + i.toString() + '.jpeg');
+      this.images4x3Src.push(this.imgPath + i.toString() + '.jpg');
     }
   }
 
   public set3x4Images() {
     for (var i = 5; i <= 7; i++) {
-      this.images3x4Src.push(this.imgPath + i.toString() + '.jpeg');
+      this.images3x4Src.push(this.imgPath + i.toString() + '.jpg');
     }
   }
 
