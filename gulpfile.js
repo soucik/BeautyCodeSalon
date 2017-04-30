@@ -160,6 +160,10 @@ gulp.task('clean-out', function (cb) {
 
 gulp.task('bundleCssCopy',['bundle-js', 'bundle-shims', 'copy-html', 'copy-img', 'copy-css']);
 
+gulp.task('lessToCss', function(){
+  return runSeq('less', ['bundleCssCopy']);
+});
+
 gulp.task('production', function(){
-  return runSeq('clean-out', ['bundleCssCopy']);
+  return runSeq('clean-out', ['lessToCss']);
 });

@@ -1,8 +1,21 @@
 /*!
- * Start Bootstrap -  v1.0.0 ()
- * Copyright 2013-2017 Palino
+ * Start Bootstrap -  v1.1.0 ()
+ * Copyright 2017 Palino
  * Licensed under  ()
  */
+body {
+  background-color: black;
+}
+.backgrounded {
+  background: black url("../img/logos/logo-man-inverted.jpg") no-repeat fixed center;
+}
+.centered {
+  margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 h1,
 h3,
 h5 {
@@ -27,7 +40,6 @@ body {
   height: 100%;
   font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
-  background-color: black;
 }
 html {
   width: 100%;
