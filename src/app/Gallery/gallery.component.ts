@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-  selector: 'gallery',
+  selector: 'gallery-salon',
   templateUrl: './app/Gallery/gallery.html'
 })
 export class GalleryComponent {
