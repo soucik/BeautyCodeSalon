@@ -13,6 +13,30 @@ var sysBuilder = require('systemjs-builder');
 var tsc = require('gulp-typescript');
 var runSeq = require('run-sequence');
 
+var fs = require('fs');
+const PATH = require('path');
+var dirTree = require('directory-tree');
+
+gulp.task('imagesPaths', function () {
+
+    var pictures=[];
+    var imagesJson='';
+    var ImagesDir = 'src/img/gallery';
+
+    try {
+    const tree = dirTree(ImagesDir, ['.jpg'], (item, PATH) => {
+        pictures.push(item);
+        //console.log(typeof(pictures));
+    });
+    console.log(pictures);
+        imagesJson=JSON.stringify(pictures);
+        fs.writeFileSync('src/img/gallery/images.json', imagesJson);
+    } 
+    catch (e) {
+        console.log("Cannot write json file with images ", e);
+    }
+});
+
 // Set the banner content
 var banner = ['/*!\n',
     ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
@@ -23,7 +47,7 @@ var banner = ['/*!\n',
 ].join('');
 
 // Compile LESS files from /less into /css
-gulp.task('less', function() {
+gulp.task('less', function () {
     return gulp.src('src/less/grayscale.less')
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
@@ -34,7 +58,7 @@ gulp.task('less', function() {
 });
 
 // Minify compiled CSS
-gulp.task('minify-css', ['less'], function() {
+gulp.task('minify-css', ['less'], function () {
     return gulp.src('src/css/grayscale.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
@@ -45,7 +69,7 @@ gulp.task('minify-css', ['less'], function() {
 });
 
 // Minify JS
-gulp.task('minify-js', function() {
+gulp.task('minify-js', function () {
     return gulp.src('src/js/custom.js')
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
@@ -57,7 +81,7 @@ gulp.task('minify-js', function() {
 });
 
 // Copy vendor libraries from /node_modules into /vendor
-gulp.task('copy', function() {
+gulp.task('copy', function () {
     gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
         .pipe(gulp.dest('src/vendor/bootstrap'))
 
@@ -79,7 +103,7 @@ gulp.task('copy', function() {
 gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
-gulp.task('browserSync', function() {
+gulp.task('browserSync', function () {
     browserSync.init({
         server: {
             baseDir: './'
@@ -88,7 +112,7 @@ gulp.task('browserSync', function() {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
+gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function () {
     gulp.watch('src/less/*.less', ['less']);
     gulp.watch('src/css/*.css', ['minify-css']);
     gulp.watch('src/js/*.js', ['minify-js']);
@@ -104,66 +128,67 @@ gulp.task('bundle-shims', function () {
         'node_modules/core-js/client/shim.min.js',
         'node_modules/zone.js/dist/zone.js',
         'node_modules/systemjs/dist/system.src.js'
-      ])
+    ])
         .pipe(concat('bundle-shims.js'))
         .pipe(uglify())
         .pipe(gulp.dest('out'));
 });
 
 // bundle dependencies in systemjs and custom app
-gulp.task('bundle-js', function() {
-  var builder = new sysBuilder('./', './src/systemjs.config.js');
-  builder.buildStatic('./src/main.js', './out/app.min.js', {sourceMaps: true, minify: true});
-        
-        gulp.src('src/js/custom.js')
+gulp.task('bundle-js', function () {
+    var builder = new sysBuilder('./', './src/systemjs.config.js');
+    builder.buildStatic('./src/main.js', './out/app.min.js', { sourceMaps: true, minify: true });
+
+    gulp.src('src/js/custom.js')
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(gulp.dest('out/js'))
 });
 
-gulp.task('copy-html', function() {
-  gulp.src('./src/app/**/*.html', {base: './src'})
-  .pipe(gulp.dest('./out'));
-  gulp.src('./donotdelete/index.html', {base: './donotdelete'})
-  .pipe(gulp.dest('./out'));
+gulp.task('copy-html', function () {
+    gulp.src('./src/app/**/*.html', { base: './src' })
+        .pipe(gulp.dest('./out'));
+    gulp.src('./donotdelete/index.html', { base: './donotdelete' })
+        .pipe(gulp.dest('./out'));
 });
 
-gulp.task('copy-img', function() {
-  gulp.src('./src/img/**', {base: './src'})
-  .pipe(gulp.dest('./out'));
-  gulp.src('./src/favicon.ico', {base: './src'})
-  .pipe(gulp.dest('./out'));
+gulp.task('copy-img', function () {
+    gulp.src('./src/img/**', { base: './src' })
+        .pipe(gulp.dest('./out'));
+    gulp.src('./src/favicon.ico', { base: './src' })
+        .pipe(gulp.dest('./out'));
 });
 
-gulp.task('copy-css', function() {
-   gulp.src('./src/css/grayscale.css', {base: './src'})
-  .pipe(gulp.dest('./out'));
+gulp.task('copy-css', function () {
+    gulp.src('./src/css/grayscale.css', { base: './src' })
+        .pipe(gulp.dest('./out'));
 
-   gulp.src('./src/vendor/bootstrap/css/bootstrap.min.css', {base: './src/vendor/bootstrap'})
-  .pipe(gulp.dest('./out'));
+    gulp.src('./src/vendor/bootstrap/css/bootstrap.min.css', { base: './src/vendor/bootstrap' })
+        .pipe(gulp.dest('./out'));
 
-   gulp.src('./src/vendor/bootstrap/fonts/*', {base: './src/vendor/bootstrap'})
-  .pipe(gulp.dest('./out'));
+    gulp.src('./src/vendor/bootstrap/fonts/*', { base: './src/vendor/bootstrap' })
+        .pipe(gulp.dest('./out'));
 
-   gulp.src('./src/vendor/font-awesome/css/font-awesome.min.css', {base: './src/vendor/font-awesome'})
-  .pipe(gulp.dest('./out'));
+    gulp.src('./src/vendor/font-awesome/css/font-awesome.min.css', { base: './src/vendor/font-awesome' })
+        .pipe(gulp.dest('./out'));
 
-   gulp.src('./src/vendor/font-awesome/fonts/**', {base: './src/vendor/font-awesome'})
-  .pipe(gulp.dest('./out'));
+    gulp.src('./src/vendor/font-awesome/fonts/**', { base: './src/vendor/font-awesome' })
+        .pipe(gulp.dest('./out'));
 });
 
 gulp.task('clean-out', function (cb) {
-    return gulp.src('./out', {read: false})
-    .pipe(clean());
+    return gulp.src('./out', { read: false })
+        .pipe(clean());
 
 });
 
-gulp.task('bundleCssCopy',['bundle-js', 'bundle-shims', 'copy-html', 'copy-img', 'copy-css']);
+gulp.task('bundleCssCopy', ['bundle-js', 'bundle-shims', 'copy-html', 'copy-img', 'copy-css']);
 
-gulp.task('lessToCss', function(){
-  return runSeq('less', ['bundleCssCopy']);
+gulp.task('lessToCss', function () {
+    return runSeq('less', ['bundleCssCopy']);
 });
 
-gulp.task('production', function(){
-  return runSeq('clean-out', ['lessToCss']);
+gulp.task('production', function () {
+    return runSeq('clean-out', ['lessToCss']);
 });
+

@@ -1,17 +1,29 @@
-<div class="container first-content" id="gallery-header">
+<div class="container first-content" id="gallery-header" style="background: black url('favicon.ico') 20px 20px;">
 	<div class="row">
 		<div class="col-md-12 text-center custom-bg">
 			<h1>Gallery</h1>
 		</div>
 	</div>
-	<div class="row">
+	<!--<div class="row">
 		<div class="col-md-3 text-center custom-bg" *ngFor="let imageSrc of images4x3Src; let i=index">
 			<img src={{imageSrc}} class="img-responsive">
 		</div>
-	</div>
+	</div>-->
 	<div class="row">
-		<div class="col-md-4 text-center custom-bg" *ngFor="let imageSrc of images3x4Src; let i=index">
-			<img src={{imageSrc}} class="img-responsive">
+		<div class="col-xs-6 col-sm-3 col-lg-2" *ngFor="let image of images; let i='index+1'">
+			<a [routerLink]="['/gallery']" [queryParams]="{ photo: i }">
+			<img src={{imgPath}}{{image}} class="img-responsive img-thumbnail" id={{i}}>
+			</a>
+		</div>
+	</div>
+</div>
+<div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<button type="button" pageScroll class="btn btn-circle page-scroll close hidden" data-dismiss="modal">×</button>
+		<div class="modal-content">
+			<!--<div class="modal-body">-->
+			<img class="imo" src="" alt="" />
+			<!--</div>-->
 		</div>
 	</div>
 </div>

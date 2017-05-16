@@ -13,18 +13,26 @@ import { AppRoutingModule }  from './app-routing.module';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
+//services with dependencies
+import { GalleryService } from './Gallery/Services/gallery.service';
+import { HttpModule } from '@angular/http';
+
 @NgModule({
   imports:      [ BrowserModule,
                   AppRoutingModule,
                   AgmCoreModule.forRoot({apiKey: 'AIzaSyBgTXzwwXAEZ65MlwJ-W1S7deIeBY81NbA'}),
-                  Ng2PageScrollModule.forRoot()                  
+                  Ng2PageScrollModule.forRoot(),
+                  HttpModule
                   ],
+  // providers:    [ GalleryService
+  //                 ],
   declarations: [ AppComponent,
                   HomeComponent,
                   PricesComponent,
                   GalleryComponent,
                   SocialComponent
                   ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent
+                  ]
 })
 export class AppModule { }

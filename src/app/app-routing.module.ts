@@ -5,11 +5,14 @@ import { HomeComponent } from './Home/home.component';
 import { PricesComponent } from './Prices/prices.component';
 import { GalleryComponent } from './Gallery/gallery.component';
 
+import { GalleryService } from './Gallery/Services/gallery.service';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'prices', component: PricesComponent },
   { path: 'gallery', component: GalleryComponent },
+  { path: 'gallery/:photo', component: GalleryComponent },
 ];
 
 @NgModule({

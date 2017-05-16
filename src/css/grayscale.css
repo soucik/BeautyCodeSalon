@@ -3,6 +3,33 @@
  * Copyright 2017 Palino
  * Licensed under  ()
  */
+.modal {
+  text-align: center;
+  vertical-align: top;
+}
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  margin: 0px;
+}
+#lightbox .modal-content {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid #ffffff;
+}
+#lightbox .close {
+  opacity: 1;
+  color: #ffffff;
+  background-color: #191919;
+  padding: 5px 8px;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  z-index: 1032;
+}
 body {
   background-color: black;
 }

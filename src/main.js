@@ -4,6 +4,7 @@ var app_module_1 = require("./app/app.module");
 var core_1 = require("@angular/core");
 require("jquery");
 require("bootstrap");
+require("rxjs/add/operator/toPromise");
 // Enable production mode unless running locally
 if (!/localhost/.test(document.location.host)) {
     core_1.enableProdMode();
