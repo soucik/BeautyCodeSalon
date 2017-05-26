@@ -1,4 +1,4 @@
-<div class="container first-content" id="gallery-header" style="background: black url('favicon.ico') 20px 20px;">
+<div class="container first-content" id="gallery-header">
 	<div class="row">
 		<div class="col-md-12 text-center custom-bg">
 			<h1>Gallery</h1>
@@ -10,9 +10,9 @@
 		</div>
 	</div>-->
 	<div class="row" id="photoGallery">
-		<div *ngFor="let image of images; let i='index+1'">
+		<div *ngFor="let image of images; let i='index+1'" class="thumbs">
 			<a class="grid-item" [routerLink]="['/gallery']" [queryParams]="{ photo: i }">
- 			<img src={{imgPath}}{{image}} class="img-responsive img-thumbnail" id={{i}}>
+			<img src={{imgPath}}{{image}} class="img-responsive img-custom-thumbnail" id={{i}}>
 			</a>
 		</div>
 	</div>
@@ -27,3 +27,4 @@
 		</div>
 	</div>
 </div>
+<gallery-salon-video></gallery-salon-video>
