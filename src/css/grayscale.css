@@ -3,8 +3,14 @@
  * Copyright 2017 Palino
  * Licensed under  ()
  */
+.overlay {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
 .thumbs {
   padding: 10px;
+  position: relative;
 }
 .thumbs .img-custom-thumbnail {
   padding: 6px;
