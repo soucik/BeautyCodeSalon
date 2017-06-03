@@ -34,6 +34,8 @@
       'ng2-page-scroll': 'npm:ng2-page-scroll/bundles/ng2-page-scroll.umd.js',
       'jquery': "npm:jquery/dist/jquery.min.js",
       'bootstrap': "npm:bootstrap/dist/js/bootstrap.min.js",
+      '@ngx-translate/core': 'npm:@ngx-translate/core/bundles/core.umd.js',
+      '@ngx-translate/http-loader': 'npm:@ngx-translate/http-loader/bundles/http-loader.umd.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {

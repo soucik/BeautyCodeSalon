@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
+                    {{ 'COMMON.MENU.TITLE' | translate }} <i class="fa fa-bars"></i>
                 </button>
             <a routerLink="home" routerLinkActive="active" class="navbar-brand page-scroll logo">
 
@@ -18,16 +18,21 @@
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a [routerLink]="['home']" href="#header" pageScroll routerLinkActive="active" class="page-scroll">Home</a>
+                    <a [routerLink]="['home']" href="#header" pageScroll routerLinkActive="active" class="page-scroll">{{ 'COMMON.MENU.HOME' | translate }}</a>
                 </li>
                 <li>
-                    <a [routerLink]="['home']" href="#contact" pageScroll routerLinkActive="active" class="page-scroll">Contact</a>
+                    <a [routerLink]="['home']" href="#contact" pageScroll routerLinkActive="active" class="page-scroll">{{ 'COMMON.MENU.CONTACT' | translate }}</a>
                 </li>
                 <li>
-                    <a routerLink="prices" routerLinkActive="active" class="page-scroll">Prices</a>
+                    <a routerLink="prices" routerLinkActive="active" class="page-scroll">{{ 'COMMON.MENU.PRICES' | translate }}</a>
                 </li>
                 <li>
-                    <a routerLink="gallery" routerLinkActive="active" class="page-scroll">Gallery</a>
+                    <a routerLink="gallery" routerLinkActive="active" class="page-scroll">{{ 'COMMON.MENU.GALLERY' | translate }}</a>
+                </li>
+                <li>
+                    <select class="form-control" #langSelect (change)="translate.use(langSelect.value)">
+                        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+                    </select>
                 </li>
             </ul>
         </div>
@@ -41,7 +46,7 @@
     <footer>
         <div class="row">
             <div class="col-md-12 text-center custom-bg about-author">
-                <p>Copyright Palino &copy; 2017</p>
+                <p>{{ 'COMMON.COPY.LABEL' | translate }} &copy; 2017</p>
             </div>
         </div>
     </footer>

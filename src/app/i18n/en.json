@@ -1,0 +1,66 @@
+{
+  "HOME": {
+    "TITLE": "Salon in Helmond",
+    "SUBTITLE1": "Hairdresser's, Nails and Lashes",
+    "SUBTITLE2": "Newly opened",
+    "CAROUSEL": {
+      "NAILS": "Nails",
+      "HAIRDRESSER": "Hairdresser",
+      "LASHES": "Lashes",
+      "HAIREXT": "Hair Extensions",
+      "EYEBROW": "Eyebrow",
+      "NEXTSLIDE": "Next",
+      "PREVIOUSSLIDE": "Previous"
+    }
+  },
+  "CONTACT": {
+    "OPEN": {
+      "TITLE": "Opening",
+      "SUBOPEN1": "Dayly 9:00 AM - 6:00 PM",
+      "SUBOPEN2": "Friday 9:00 AM - 9:00 PM",
+      "SUBOPEN3": "Sunday Closed"
+    },
+    "ADDRESS": {
+      "TITLE": "Address",
+      "SUBADDRESS1": "BEAUTY CODE",
+      "SUBADDRESS2": "MOLENSTRAAT 192",
+      "SUBADDRESS3": "5701KL",
+      "SUBADDRESS4": "HELMOND",
+      "SUBADDRESS5": "KVK number: 67250254"
+    },
+    "PHONE": {
+      "TITLE": "Phone",
+      "NUMBER": "+31 6 19055057"
+    },
+    "MAP": {
+      "SALON": "Salon"
+    }
+  },
+  "PRICES": {
+    "TITLE": "Prices"
+  },
+  "GALLERY": {
+    "TITLE": "Gallery"
+  },
+  "VIDEOGALLERY": {
+    "TITLE": "Video Gallery"
+  },
+  "SERVICES": {},
+  "COMMON": {
+    "MENU": {
+      "TITLE": "Menu",
+      "HOME": "Home",
+      "CONTACT": "Contact",
+      "PRICES": "Prices",
+      "GALLERY": "Gallery",
+      "SERVICES": "Services",
+      "LANGUAGE": "Language"
+    },
+    "SOCIAL": {
+      "FACEBOOK": "Facebook"
+    },
+    "COPY": {
+      "LABEL": "Copyright Palino"
+    }
+  }
+}
