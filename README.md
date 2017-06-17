@@ -1,5 +1,5 @@
-<h1>TheBeautyCode v1.1</h1>
-    <h2>Repository for 'Holland' webpage</h2>
+<h1>BeautyCodeSalon v1.1</h1>
+    <h2>Repository for 'Holland' webapp</h2>
 <p>
 Project includes:
     <ul>
