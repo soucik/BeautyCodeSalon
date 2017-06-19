@@ -12,7 +12,7 @@
 	<div class="row" id="photoGallery">
 		<div *ngFor="let image of images; let i='index+1'" class="thumbs">
 			<a class="grid-item" [routerLink]="['/gallery']" [queryParams]="{ photo: i }">
-			<img src={{imgPath}}{{image}} class="img-responsive img-custom-thumbnail" id={{i}}>
+			<img src={{imgPath}}{{image}} class="img-responsive bordered" id={{i}}>
 			</a>
 		</div>
 	</div>

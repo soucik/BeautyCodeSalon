@@ -12,10 +12,13 @@
   padding: 10px;
   position: relative;
 }
-.thumbs .img-custom-thumbnail {
+.thumbs .bordered {
   padding: 6px;
   border-radius: 6px;
   border: 1px solid #ddd;
+}
+.thumbs.videofull {
+  width: 100%;
 }
 .modal {
   text-align: center;
