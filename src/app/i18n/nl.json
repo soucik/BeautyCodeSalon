@@ -1,65 +1,65 @@
 {
   "HOME": {
-    "TITLE": "--NL--Salon in Helmond",
-    "SUBTITLE1": "--NL--Hairdresser's, Nails and Lashes",
-    "SUBTITLE2": "--NL--Newly opened",
+    "TITLE": "Kapsalon in Helmond",
+    "SUBTITLE1": "Gelnagels and Wimpers",
+    "SUBTITLE2": "Nieuwe open",
     "CAROUSEL":{ 
-      "NAILS": "--NL--Nails",
-      "HAIRDRESSER": "--NL--Hairdresser",
-      "LASHES": "--NL--Lashes",
-      "HAIREXT": "--NL--Hair Extensions",
-      "EYEBROW": "--NL--Eyebrow",
-      "NEXTSLIDE": "--NL--Next",
-      "PREVIOUSSLIDE": "--NL--Previous"
+      "NAILS": "Nagels",
+      "HAIRDRESSER": "Kapper",
+      "LASHES": "Wimpers extensions",
+      "HAIREXT": "Haar extensions",
+      "EYEBROW": "Wenkbrauwen",
+      "NEXTSLIDE": "Volgende",
+      "PREVIOUSSLIDE": "Terug"
       }
   },
   "CONTACT": {
     "OPEN": {
-      "TITLE": "--NL--Opening",
-      "SUBOPEN1": "--NL--Dayly 9:00 AM - 6:00 PM",
-      "SUBOPEN2": "--NL--Friday 9:00 AM - 9:00 PM",
-      "SUBOPEN3": "--NL--Sunday Closed"
+      "TITLE": "Opentijd",
+      "SUBOPEN1": "Elke dag 9:00 AM - 6:00 PM",
+      "SUBOPEN2": "Vrijdag 9:00 AM - 9:00 PM",
+      "SUBOPEN3": "Zondag Gesloten"
     },
     "ADDRESS": {
-      "TITLE": "--NL--Address",
-      "SUBADDRESS1": "--NL--BEAUTY CODE",
-      "SUBADDRESS2": "--NL--MOLENSTRAAT 192",
-      "SUBADDRESS3": "--NL--5701KL",
-      "SUBADDRESS4": "--NL--HELMOND",
-      "SUBADDRESS5": "--NL--KVK number: 67250254"
+      "TITLE": "Adres",
+      "SUBADDRESS1": "BEAUTY CODE",
+      "SUBADDRESS2": "MOLENSTRAAT 192",
+      "SUBADDRESS3": "5701KL",
+      "SUBADDRESS4": "HELMOND",
+      "SUBADDRESS5": "KVK nummer: 67250254"
     },
     "PHONE": {
-      "TITLE": "--NL--Phone",
-      "SUBOPEN1": "--NL--+31 6 19055057"
+      "TITLE": "Telephone",
+      "SUBOPEN1": "+31 6 19055057"
     },
     "MAP": { 
       "SALON":  "Salon" }
   },
   "PRICES": {
-    "TITLE": "--NL--Prices"
+    "TITLE": "Prijslist"
   },
   "GALLERY": {
-    "TITLE": "--NL--Gallery"
+    "TITLE": "Gallery"
   },
   "VIDEOGALLERY": {
-    "TITLE": "--NL--Video Gallery"
+    "TITLE": "Videogallery"
   },
   "SERVICES": { },
 
   "COMMON": {
     "MENU": {
-      "TITLE": "--NL--Menu",
-      "HOME": "--NL--Home",
-      "CONTACT": "--NL--Contact",
-      "PRICES": "--NL--Prices",
-      "GALLERY": "--NL--Gallery",
-      "SERVICES": "--NL--Services",
-      "LANGUAGE": "--NL--Language"
+      "TITLE": "Menu",
+      "HOME": "Home",
+      "CONTACT": "Contact",
+      "PRICES": "Prices",
+      "GALLERY": "Gallery",
+      "SERVICES": "Diensten",
+      "LANGUAGE": "Taal"
     },
     "SOCIAL": {
-      "FACEBOOK": "--NL--Facebook"},
+      "FACEBOOK": "Facebook"},
     "COPY": {
-      "LABEL": "--NL--Copyright Palino"
+      "LABEL": "Auteursrecht Palino"
     }
   }
 }
