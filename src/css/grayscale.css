@@ -17,7 +17,7 @@
   border-radius: 6px;
   border: 1px solid #ddd;
 }
-.thumbs.videofull {
+.thumbs .bordered.videofull {
   width: 100%;
 }
 .modal {
@@ -65,6 +65,12 @@ h5 {
 }
 #social-panel {
   margin-top: 30px;
+}
+#social-panel iframe {
+  width: 340px;
+  height: 130px;
+  border: none;
+  overflow: hidden;
 }
 #map {
   margin-top: 100px;
