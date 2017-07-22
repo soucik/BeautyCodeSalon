@@ -1,49 +1,54 @@
-<div class="container first-content" id="header">
-    <div class="row">
-        <div id="headingCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#headingCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#headingCarousel" data-slide-to="1"></li>
-                <li data-target="#headingCarousel" data-slide-to="2"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="./img/home-slides/slide-0.jpg" alt="{{ 'HOME.CAROUSEL.NAILS' | translate }}" class="img-carousel img-thumbnail">
-                </div>
-                <div class="item">
-                    <img src="./img/home-slides/slide-2.jpg" alt="{{ 'HOME.CAROUSEL.HAIRDRESSER' | translate }}" class="img-carousel img-thumbnail">
-                </div>
-                <div class="item">
-                    <img src="./img/home-slides/slide-1.jpg" alt="{{ 'HOME.CAROUSEL.LASHES' | translate }}" class="img-carousel img-thumbnail">
-                </div>
-            </div>
+<article class="container first-content" id="header">
+    <div class="backgrounded-inside">
+        <div class="cc">
+            <div class="row">
+                <div id="headingCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#headingCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#headingCarousel" data-slide-to="1"></li>
+                        <li data-target="#headingCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="./img/home-slides/slide-0.jpg" alt="{{ 'HOME.CAROUSEL.NAILS' | translate }}" class="img-carousel img-thumbnail">
+                        </div>
+                        <div class="item">
+                            <img src="./img/home-slides/slide-2.jpg" alt="{{ 'HOME.CAROUSEL.HAIRDRESSER' | translate }}" class="img-carousel img-thumbnail">
+                        </div>
+                        <div class="item">
+                            <img src="./img/home-slides/slide-1.jpg" alt="{{ 'HOME.CAROUSEL.LASHES' | translate }}" class="img-carousel img-thumbnail">
+                        </div>
+                    </div>
 
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#headingCarousel" role="button" data-slide="prev">
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#headingCarousel" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">{{ 'HOME.CAROUSEL.PREVIOUSSLIDE' | translate }}</span>
             </a>
-            <a class="right carousel-control" href="#headingCarousel" role="button" data-slide="next">
+                    <a class="right carousel-control" href="#headingCarousel" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">{{ 'HOME.CAROUSEL.NEXTSLIDE' | translate }}</span>
             </a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1 text-center custom-bg first-content">
-            <h1 id="color-stylish-red">{{ 'HOME.TITLE' | translate }}</h1>
-            <h2>{{ 'HOME.SUBTITLE1' | translate }}</h2>
-            <h2>{{ 'HOME.SUBTITLE2' | translate }}</h2>
+                </div>
+            </div>
+            <div class="row bgForText">
+                <div class="col-md-10 col-md-offset-1 text-center custom-bg first-content">
+                    <h1 id="color-stylish-red">{{ 'HOME.TITLE' | translate }}</h1>
+                    <h2>{{ 'HOME.SUBTITLE1' | translate }}</h2>
+                    <h2>{{ 'HOME.SUBTITLE2' | translate }}</h2>
             <a href="#contact" pageScroll class="btn btn-circle page-scroll">
                 <i class="fa fa-angle-double-down animated"></i>
             </a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div class="container first-content" id="contact">
-    <div class="row">
+</article>
+<article class="container first-content" id="contact">
+
+    <div class="row bgForText">
         <div class="col-md-4 custom-bg text-center" id="address">
             <div>
                 <!-- Map Section -->
@@ -64,14 +69,15 @@
             </div>
         </div>
         <div class="col-md-6 col-md-offset-1 custom-bg" id="googleMap">
-            <div class="container" id="map" style="height: 430px; padding-top: 15px; padding-bottom: 15px; margin-top: auto">
+            <div class="bgForText">
+                <div class="container" id="map" style="height: 430px; padding-top: 15px; padding-bottom: 15px; margin-top: auto">
 
-                <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="true">
-                    <sebm-google-map-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng" [label]="m.label"
-                        [markerDraggable]="m.draggable">
-                    </sebm-google-map-marker>
-                </sebm-google-map>
-
+                    <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="true">
+                        <sebm-google-map-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng" [label]="m.label"
+                            [markerDraggable]="m.draggable">
+                        </sebm-google-map-marker>
+                    </sebm-google-map>
+                </div>
             </div>
         </div>
     </div>
@@ -82,4 +88,4 @@
             </a>
         </div>
     </div>
-</div>
+</article>

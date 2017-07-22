@@ -6,7 +6,7 @@
                 </button>
             <a routerLink="home" routerLinkActive="active" class="navbar-brand page-scroll logo">
 
-                <img width="210px" src="img/logos/label-1.png">
+                <img width="210px" src="img/logos/label-0.png">
 
             </a>
         </div>
@@ -40,14 +40,16 @@
     </div>
     <!-- /.container -->
 </nav>
-<router-outlet></router-outlet>
-<social-component></social-component>
-<div class="container first-content" id="author">
-    <footer>
-        <div class="row">
-            <div class="col-md-12 text-center custom-bg about-author">
-                <p>{{ 'COMMON.COPY.LABEL' | translate }} &copy; 2017</p>
-            </div>
+<section>
+    <router-outlet></router-outlet>
+</section>
+<section>
+    <social-component></social-component>
+</section>
+<footer class="container first-content" id="author">
+    <div class="row bgForText">
+        <div class="col-md-12 text-center custom-bg about-author">
+            <p>{{ 'COMMON.COPY.LABEL' | translate }} &copy; 2017</p>
         </div>
-    </footer>
-</div>
+    </div>
+</footer>

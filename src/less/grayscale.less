@@ -1,7 +1,36 @@
 @import "variables.less";
 @import "mixins.less";
 
+.backgrounded-inside::after{
+  content: "";
+  background: url('../img/logos/label-4.png') repeat  right center black;
+  opacity: 0.25;
+  top: 110px;
+  left: 0px;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
+}
 
+.bgForText{
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.35);
+}
+// .cc::after{
+//   content: "";
+//   background: url('../img/logos/label-2.png') repeat fixed right center black;
+//   opacity: 0.1;
+//   top: 120px;
+//   left: 0px;
+//   bottom: 300px;
+//   right: 0;
+//   position: absolute;
+//   z-index: -1;
+// }
+// article#contact{
+//     background: url('../img/logos/label-2.png') repeat fixed right center black;
+// }
 // // VERTICAL CENTERING IN .container-fluid 
 // .container-fluid{
 //   height:100%;
@@ -105,6 +134,7 @@ iframe{
 
 #map{
     margin-top: 100px;
+    //background: black url("../favicon.ico") repeat fixed;
 }
 
 .first-content{
@@ -143,7 +173,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 35px;
+    margin: 15 0 35px;
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
