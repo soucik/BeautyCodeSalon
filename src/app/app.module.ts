@@ -21,7 +21,7 @@ import { SharedModule } from './Shared/Shared/shared.module';
 //services with dependencies
 import { GalleryService } from './Gallery/Services/gallery.service';
 import { HttpModule, Http } from '@angular/http';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http, "./app/i18n/", ".json");
 }
@@ -51,6 +51,7 @@ export function HttpLoaderFactory(http: Http) {
                   SocialComponent
                   ],
   bootstrap:    [ AppComponent
-                  ]
+                  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
