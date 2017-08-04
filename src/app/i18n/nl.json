@@ -3,7 +3,7 @@
     "TITLE": "Kapsalon in Helmond",
     "SUBTITLE1": "Gelnagels and Wimpers",
     "SUBTITLE2": "Nieuwe open",
-    "CAROUSEL":{ 
+    "CAROUSEL": {
       "NAILS": "Nagels",
       "HAIRDRESSER": "Kapper",
       "LASHES": "Wimpers extensions",
@@ -11,7 +11,7 @@
       "EYEBROW": "Wenkbrauwen",
       "NEXTSLIDE": "Volgende",
       "PREVIOUSSLIDE": "Terug"
-      }
+    }
   },
   "CONTACT": {
     "OPEN": {
@@ -32,32 +32,199 @@
       "TITLE": "Telephone",
       "SUBOPEN1": "+31 6 19055057"
     },
-    "MAP": { 
-      "SALON":  "Salon" }
+    "MAP": {
+      "SALON": "Salon"
+    }
   },
   "PRICES": {
-    "TITLE": "Prijslist"
+    "TITLE": "Prijslist",
+    "SERVICE": "Service",
+    "PRICE": "Prijs",
+    "WOMAN-TITLE": "Dames behandeling & Prijzen",
+    "CHILDREN-TITLE": "Kinderen",
+    "NAILS-TITLE": "Gel nagels",
+    "WIMPERS-TITLE": "Wimpers extensions",
+    "EXTENSIONS-TITLE": "Haar extensions",
+    "MAN-TITLE": "Heren Behandeling & Prijzen",
+    "WOMAN": [
+      [
+        "Knippen",
+        13,
+        "v.a."
+      ],
+      [
+        "Verven",
+        20,
+        "Korte haren v.a."
+      ],
+      [
+        "Verven",
+        30,
+        "Lange haren v.a."
+      ],
+      [
+        "Klerubehandeling uitgroei",
+        20
+      ],
+      [
+        "Wassen en drogen",
+        10
+      ],
+      [
+        "Model föhnen",
+        10,
+        "v.a."
+      ],
+      [
+        "Gezichtsmasker",
+        5
+      ],
+      [
+        "Bovenlip epileren met touwtje",
+        5
+      ],
+      [
+        "Wenkbrauwen epileren met touwtje",
+        7
+      ],
+      [
+        "Gezicht epileren met touwtje",
+        10,
+        "v.a."
+      ],
+      [
+        "Wenkbrauwen verven",
+        5
+      ],
+      [
+        "Highlights",
+        25,
+        "per folie 1.5, v.a"
+      ],
+      [
+        "Permanent, knippen en watergolven",
+        35,
+        "v.a."
+      ],
+      [
+        "Permanent, knippen en drogen",
+        35,
+        "v.a."
+      ],
+      [
+        "Opsteken",
+        15,
+        "v.a."
+      ],
+      [
+        "Opmaken",
+        15,
+        "v.a."
+      ]
+    ],
+    "CHILDREN": [
+      [
+        "Knippen",
+        8.5
+      ]
+    ],
+    "NAILS": [
+      [
+        "Nieuwe set. incl. 2 nagel art",
+        25
+      ],
+      [
+        "Opvullen",
+        20
+      ]
+    ],
+    "WIMPERS": [
+      [
+        "Volume nieuwe set",
+        40
+      ],
+      [
+        "Opvullen",
+        30
+      ],
+      [
+        "One by one",
+        30
+      ],
+      [
+        "Verwijderen",
+        10
+      ]
+    ],
+    "EXTENSIONS": [
+      [
+        "Micro ringen/ per st. incl. haar",
+        2.2
+      ],
+      [
+        "Replace per st.",
+        0.5
+      ],
+      [
+        "Verwijderen per st.",
+        0.25
+      ]
+    ],
+    "MAN": [
+      [
+        "Knippen",
+        10
+      ],
+      [
+        "Baard scheren",
+        5
+      ],
+      [
+        "Knippen en wassen",
+        12
+      ],
+      [
+        "Knippen, oorhaar branden, wenkbrauwen bijwerken",
+        12
+      ],
+      [
+        "Haar verven, vanaf",
+        10
+      ],
+      [
+        "Gezichtsmasker",
+        5
+      ],
+      [
+        "Gezichtepileren met touwtje",
+        7
+      ],
+      [
+        "Knippen, scheren, epileren, en gezichtmasker",
+        20
+      ]
+    ]
   },
   "GALLERY": {
-    "TITLE": "Gallery"
+    "TITLE": "Galerie"
   },
   "VIDEOGALLERY": {
-    "TITLE": "Videogallery"
+    "TITLE": "Video Galerie"
   },
-  "SERVICES": { },
-
+  "SERVICES": {},
   "COMMON": {
     "MENU": {
       "TITLE": "Menu",
-      "HOME": "Home",
+      "HOME": "Titelseite",
       "CONTACT": "Contact",
-      "PRICES": "Prices",
-      "GALLERY": "Gallery",
+      "PRICES": "Prijslijst",
+      "GALLERY": "Galerie",
       "SERVICES": "Diensten",
       "LANGUAGE": "Taal"
     },
     "SOCIAL": {
-      "FACEBOOK": "Facebook"},
+      "FACEBOOK": "Facebook"
+    },
     "COPY": {
       "LABEL": "Auteursrecht Palino"
     }
