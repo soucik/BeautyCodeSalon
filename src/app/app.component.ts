@@ -10,7 +10,7 @@ export class AppComponent  {
   name = 'Beauty Code Salon';
 
     constructor(private translate: TranslateService) {
-    translate.addLangs(["en", "nl", "ar", "sk"]);
+    translate.addLangs(["en", "nl"]);
     translate.setDefaultLang('en');
 
     let browserLang = translate.getBrowserLang();
