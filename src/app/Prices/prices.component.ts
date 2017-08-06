@@ -1,40 +1,60 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Observable } from 'rxjs/Observable';
-// import { Subscription } from 'rxjs/Subscription';
+import { Http } from "@angular/http";
+
+interface IPrices {
+  pricesWoman: any;
+  pricesMan: any;
+  pricesExt: any;
+  pricesNails: any;
+  pricesChildren: any;
+  pricesWimpers: any;
+}
 
 @Component({
   selector: 'prices',
   templateUrl: './app/Prices/prices.html'
 })
 export class PricesComponent implements OnInit {
-  private oTranslation: Observable<any>;
-  private translation: any;
+  @Input("hero") hero: any;
 
-  private pricesWoman: any;
-  private pricesMan: any;
-  private pricesExt: any;
-  private pricesNails: any;
-  private pricesChildren: any;
-  private pricesWimpers: any;
+  private prices: any;
+  private transPath: string = 'app/i18n/';
 
-  constructor(private translate: TranslateService,
+  constructor(
+    private translate: TranslateService,
+    private http: Http
   ) {
 
-    this.oTranslation = this.translate.getTranslation(this.translate.currentLang);
+    translate.onLangChange.subscribe((event: any) => {
+      this.doTranslation(event.translations.PRICES);
+    });
+    this.doTranslation(this.getLang(this.translate.currentLang));
+
+    // translate.getTranslation(this.translate.currentLang).subscribe(oTranslations => {
+    //   this.doTranslation(oTranslations)
+    // }
+    // )
   }
 
+  doTranslation(prices: any) {
+    this.prices = prices;
+    // console.log('do trans');
+    // console.log(this.prices);
+  }
+  getLang(lang: string) {
+    this.http.get('app/i18n/' + lang + '.json')
+      .toPromise()
+      .then(translation => {
+        return translation.json();
+      }).then(translationJson => {
+        this.prices = translationJson.PRICES;
+        // console.log(translationJson.PRICES);
+      }
+      )
+  }
   ngOnInit(): void {
-    this.oTranslation.subscribe(translation => {
-
-      this.pricesWoman = translation.PRICES.WOMAN
-      this.pricesMan = translation.PRICES.MAN
-      this.pricesExt = translation.PRICES.EXTENSIONS
-      this.pricesNails = translation.PRICES.NAILS
-      this.pricesChildren = translation.PRICES.CHILDREN
-      this.pricesWimpers = translation.PRICES.WIMPERS
-    }
-    )
+    //console.log(this.hero);
   }
 
   public ngOnDestroy(): void {

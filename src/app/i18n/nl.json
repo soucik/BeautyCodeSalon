@@ -40,194 +40,185 @@
     "TITLE": "Prijslist",
     "SERVICE": "Service",
     "PRICE": "Prijs",
-    "WOMAN": {
-      "NAME": "Dames behandeling prijzen",
-      "CONTEXT": {
-        "ARTICLE1": {
-          "LABEL": "Knippen",
-          "PRICE1": 13,
-          "ADD1": "v.a."
-        },
-        "ARTICLE2": {
-          "LABEL": "Verven",
-          "PRICE1": 20,
-          "PRICE2": 30,
-          "ADD1": "Korte haren v.a.",
-          "ADD2": "Lange haren v.a."
-        },
-        "ARTICLE3": {
-          "LABEL": "Klerubehaneling uigroei",
-          "PRICE1": 20
-        },
-        "ARTICLE4": {
-          "LABEL": "Wassen en drogen",
-          "PRICE1": 10
-        },
-        "ARTICLE5": {
-          "LABEL": "Model fohnen",
-          "PRICE1": 10,
-          "ADD1": "v.a."
-        },
-        "ARTICLE6": {
-          "LABEL": "Gezichtmasker",
-          "PRICE1": 5
-        },
-        "ARTICLE7": {
-          "LABEL": "Bovenlip epileren met touwtje",
-          "PRICE1": 5
-        },
-        "ARTICLE8": {
-          "LABEL": "Wenkbrauwen epileren met touwtje",
-          "PRICE1": 7
-        },
-        "ARTICLE9": {
-          "LABEL": "Gezicht epileren met touwtje",
-          "PRICE1": 10,
-          "ADD1": "v.a."
-        },
-        "ARTICLE10": {
-          "LABEL": "Wenkbrauwen verven",
-          "PRICE1": 5
-        },
-        "ARTICLE11": {
-          "LABEL": "Highlights",
-          "PRICE1": 25,
-          "ADD1": "per folie 1.5, v.a"
-        },
-        "ARTICLE12": {
-          "LABEL": "Permanent, knippen en watergolven",
-          "PRICE1": 35,
-          "ADD1": "v.a."
-        },
-        "ARTICLE13": {
-          "LABEL": "Permanent, knippen en drogen",
-          "PRICE1": 35,
-          "ADD1": "v.a."
-        },
-        "ARTICLE14": {
-          "LABEL": "Opsteken",
-          "PRICE1": 15,
-          "ADD1": "v.a."
-        },
-        "ARTICLE15": {
-          "LABEL": "Opmaken",
-          "PRICE1": 15,
-          "ADD1": "v.a."
-        }
-      }
-    },
-    "CHILDREN": {
-      "NAME": "Kinderen",
-      "CONTEXT": {
-        "ARTICLE1": {
-          "LABEL": "Knippen",
-          "PRICE1": 13
-        }
-      }
-    },
-    "NAILS": {
-      "NAME": "Gel nagels",
-      "CONTEXT": {
-        "ARTICLE1": {
-          "LABEL": "Nieuwe set. incl. 2 nagel art",
-          "PRICE1": 25
-        },
-        "ARTICLE2": {
-          "LABEL": "Opvullen",
-          "PRICE1": 20
-        }
-      }
-    },
-    "WIMPERS": {
-      "NAME": "Wimpers extensions",
-      "CONTEXT": {
-        "ARTICLE1": {
-          "LABEL": "Volume nieuwe set",
-          "PRICE1": 40
-        },
-        "ARTICLE2": {
-          "LABEL": "Opvullen",
-          "PRICE1": 30
-        },
-        "ARTICLE3": {
-          "LABEL": "One by one",
-          "PRICE1": 30
-        },
-        "ARTICLE4": {
-          "LABEL": "Verwijderen",
-          "PRICE1": 10
-        }
-      }
-    },
-    "EXTENSIONS": {
-      "NAME": "Haar extensions",
-      "CONTEXT": {
-        "ARTICLE1": {
-          "LABEL": "Micro ringen/ per st. incl. haar",
-          "PRICE1": 2.2
-        },
-        "ARTICLE2": {
-          "LABEL": "Replace per st.",
-          "PRICE1": 0.5
-        },
-        "ARTICLE3": {
-          "LABEL": "Verwijderen per st.",
-          "PRICE1": 0.25
-        }
-      }
-    },
-    "MAN": {
-      "NAME": "Heren Behandeling & Prijzen",
-      "CONTEXT": {
-        "ARTICLE1": {
-          "LABEL": "Knippen",
-          "PRICE1": 10
-        },
-        "ARTICLE2": {
-          "LABEL": "Baard scheren",
-          "PRICE1": 5
-        },
-        "ARTICLE3": {
-          "LABEL": "Knippen en wassen",
-          "PRICE1": 12
-        },
-        "ARTICLE4": {
-          "LABEL": "Knippen, oorhaar branden, wenkbrauwen bijwerken",
-          "PRICE1": 12
-        },
-        "ARTICLE5": {
-          "LABEL": "Haar verven, vanaf",
-          "PRICE1": 10
-        },
-        "ARTICLE6": {
-          "LABEL": "Gezichtmasker",
-          "PRICE1": 5
-        },
-        "ARTICLE7": {
-          "LABEL": "Gezichtepileren met touwtje",
-          "PRICE1": 7
-        },
-        "ARTICLE8": {
-          "LABEL": "Knippen, scheren, epileren, en gezichtmasker",
-          "PRICE1": 20
-        }
-      }
-    }
+    "WOMAN-TITLE": "Dames behandeling & Prijzen",
+    "CHILDREN-TITLE": "Kinderen",
+    "NAILS-TITLE": "Gel nagels",
+    "WIMPERS-TITLE": "Wimpers extensions",
+    "EXTENSIONS-TITLE": "Haar extensions",
+    "MAN-TITLE": "Heren Behandeling & Prijzen",
+    "WOMAN": [
+      [
+        "Knippen",
+        13,
+        "v.a."
+      ],
+      [
+        "Verven",
+        20,
+        "Korte haren v.a."
+      ],
+      [
+        "Verven",
+        30,
+        "Lange haren v.a."
+      ],
+      [
+        "Klerubehandeling uitgroei",
+        20
+      ],
+      [
+        "Wassen en drogen",
+        10
+      ],
+      [
+        "Model föhnen",
+        10,
+        "v.a."
+      ],
+      [
+        "Gezichtsmasker",
+        5
+      ],
+      [
+        "Bovenlip epileren met touwtje",
+        5
+      ],
+      [
+        "Wenkbrauwen epileren met touwtje",
+        7
+      ],
+      [
+        "Gezicht epileren met touwtje",
+        10,
+        "v.a."
+      ],
+      [
+        "Wenkbrauwen verven",
+        5
+      ],
+      [
+        "Highlights",
+        25,
+        "per folie 1.5, v.a"
+      ],
+      [
+        "Permanent, knippen en watergolven",
+        35,
+        "v.a."
+      ],
+      [
+        "Permanent, knippen en drogen",
+        35,
+        "v.a."
+      ],
+      [
+        "Opsteken",
+        15,
+        "v.a."
+      ],
+      [
+        "Opmaken",
+        15,
+        "v.a."
+      ]
+    ],
+    "CHILDREN": [
+      [
+        "Knippen",
+        8.5
+      ]
+    ],
+    "NAILS": [
+      [
+        "Nieuwe set. incl. 2 nagel art",
+        25
+      ],
+      [
+        "Opvullen",
+        20
+      ]
+    ],
+    "WIMPERS": [
+      [
+        "Volume nieuwe set",
+        40
+      ],
+      [
+        "Opvullen",
+        30
+      ],
+      [
+        "One by one",
+        30
+      ],
+      [
+        "Verwijderen",
+        10
+      ]
+    ],
+    "EXTENSIONS": [
+      [
+        "Micro ringen/ per st. incl. haar",
+        2.2
+      ],
+      [
+        "Replace per st.",
+        0.5
+      ],
+      [
+        "Verwijderen per st.",
+        0.25
+      ]
+    ],
+    "MAN": [
+      [
+        "Knippen",
+        10
+      ],
+      [
+        "Baard scheren",
+        5
+      ],
+      [
+        "Knippen en wassen",
+        12
+      ],
+      [
+        "Knippen, oorhaar branden, wenkbrauwen bijwerken",
+        12
+      ],
+      [
+        "Haar verven, vanaf",
+        10
+      ],
+      [
+        "Gezichtsmasker",
+        5
+      ],
+      [
+        "Gezichtepileren met touwtje",
+        7
+      ],
+      [
+        "Knippen, scheren, epileren, en gezichtmasker",
+        20
+      ]
+    ]
   },
   "GALLERY": {
-    "TITLE": "Gallery"
+    "TITLE": "Galerie"
   },
   "VIDEOGALLERY": {
-    "TITLE": "Videogallery"
+    "TITLE": "Video Galerie"
   },
   "SERVICES": {},
   "COMMON": {
     "MENU": {
       "TITLE": "Menu",
-      "HOME": "Home",
+      "HOME": "Titelseite",
       "CONTACT": "Contact",
-      "PRICES": "Prices",
-      "GALLERY": "Gallery",
+      "PRICES": "Prijslijst",
+      "GALLERY": "Galerie",
       "SERVICES": "Diensten",
       "LANGUAGE": "Taal"
     },

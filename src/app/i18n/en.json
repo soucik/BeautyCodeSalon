@@ -37,7 +37,173 @@
     }
   },
   "PRICES": {
-    "TITLE": "Prices"
+    "TITLE": "Price List",
+    "SERVICE": "Service",
+    "PRICE": "Price",
+    "WOMAN-TITLE": "Ladies cure & Cost",
+    "CHILDREN-TITLE": "Children",
+    "NAILS-TITLE": "Gel nails",
+    "WIMPERS-TITLE": "Wimpers extensions",
+    "EXTENSIONS-TITLE": "Hair extensions",
+    "MAN-TITLE": "Gentlemen cure & Cost",
+    "WOMAN": [
+      [
+        "Haircut",
+        13,
+        "a.o."
+      ],
+      [
+        "Paint",
+        20,
+        "Short hair a.o."
+      ],
+      [
+        "Paint",
+        30,
+        "Long hair a.o."
+      ],
+      [
+        "Color treatment outgrowth",
+        20
+      ],
+      [
+        "Washing and drying",
+        10
+      ],
+      [
+        "Model fanning",
+        10,
+        "a.o."
+      ],
+      [
+        "Face mask",
+        5
+      ],
+      [
+        "Top lip epilating with rope",
+        5
+      ],
+      [
+        "Eyebrows epilate with rope",
+        7
+      ],
+      [
+        "Face epilation with rope",
+        10,
+        "a.o."
+      ],
+      [
+        "Paint eyebrows",
+        5
+      ],
+      [
+        "Highlights",
+        25,
+        "per folie 1.5, a.o."
+      ],
+      [
+        "Permanent, haircut and water waves",
+        35,
+        "a.o."
+      ],
+      [
+        "Permanent, haircut and drying",
+        35,
+        "a.o."
+      ],
+      [
+        "Light up",
+        15,
+        "a.o."
+      ],
+      [
+        "Make up",
+        15,
+        "a.o."
+      ]
+    ],
+    "CHILDREN": [
+      [
+        "Haircut",
+        8.5
+      ]
+    ],
+    "NAILS": [
+      [
+        "New set. Incl. 2 nail art",
+        25
+      ],
+      [
+        "Filling up",
+        20
+      ]
+    ],
+    "WIMPERS": [
+      [
+        "Volume new set",
+        40
+      ],
+      [
+        "illing up",
+        30
+      ],
+      [
+        "One by one",
+        30
+      ],
+      [
+        "Remove",
+        10
+      ]
+    ],
+    "EXTENSIONS": [
+      [
+        "Micro rings/ per piece incl. hair",
+        2.2
+      ],
+      [
+        "Replace per piece",
+        0.5
+      ],
+      [
+        "Remove per piece",
+        0.25
+      ]
+    ],
+    "MAN": [
+      [
+        "Haircut",
+        10
+      ],
+      [
+        "Beard shave",
+        5
+      ],
+      [
+        "Haircut and wash",
+        12
+      ],
+      [
+        "Haircut, burn over, burn eyebrows",
+        12
+      ],
+      [
+        "Hair drying, from",
+        10
+      ],
+      [
+        "Face mask",
+        5
+      ],
+      [
+        "Face epilating with rope",
+        7
+      ],
+      [
+        "Haircut, shave, epilate and face mask",
+        20
+      ]
+    ]
   },
   "GALLERY": {
     "TITLE": "Gallery"
