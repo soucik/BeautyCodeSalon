@@ -1,22 +1,27 @@
-export interface OutFbAlbum {
+import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+
+export interface RequestedAlbum {
+  _body: ResponseAlbum;
+}
+
+export interface ResponseAlbum {
   created_time: string;
   id: string;
 }
 
-export interface FbAlbum {
-  hairID: string;
-  lashesID: string;
-  wimpersID: string
-  extensionsID: string;
-  nailsID: string;
-  hairPicturesIDs?: Array<OutFbAlbum>;
-  lashesPicturesIDs?: Array<OutFbAlbum>;
-  wimpersPicturesIDs?: Array<OutFbAlbum>;
-  extensionsPicturesIDs?: Array<OutFbAlbum>;
-  nailsPicturesIDs?: Array<OutFbAlbum>
+export interface ResponsePhotoUrl {
+  id: string;
+  photoType: string;
+  url: string;
 }
 
-export interface OutFbPhoto {
-  is_silhouette: string;
-  url: string;
+export interface FbAlbum {
+  albumID: string;
+  photos?: Array<Photos>;
+}
+
+export interface Photos {
+  id: string;
+  created_time?: string;
+  photoElements?: string[];
 }

@@ -19,12 +19,11 @@
 				</div>
 				<div id="collapse1" class="panel-collapse collapse">
 					<div class="row" id="photoGallery">
-						<div *ngFor="let image of images; let i='index+1'" class="thumbs">
-							<a class="grid-item" [routerLink]="['/gallery']" [queryParams]="{ photo: i }">
-			<img src={{imgPath}}{{image}} class="img-responsive bordered" id={{i}}>
-			</a>
+						<div *ngFor="let photos of hairAlbum.photos; let i='index+1'" class="thumbs">
+							<a class="grid-item" [routerLink]="['/gallery']" [queryParams]="{ photo: photos.id }">
+						<img *ngIf="photos.photoElements[0]" [src]="photos.photoElements[0]" id={{photos.id}} class="img-responsive bordered">
+						</a>
 						</div>
-						<div class="panel-footer">Footer</div>
 					</div>
 				</div>
 			</div>
@@ -41,7 +40,6 @@
 			<img src={{imgPath}}{{image}} class="img-responsive bordered" id={{i}}>
 			</a>
 						</div>
-						<div class="panel-footer">Footer</div>
 					</div>
 				</div>
 			</div>
@@ -58,7 +56,6 @@
 			<img src={{imgPath}}{{image}} class="img-responsive bordered" id={{i}}>
 			</a>
 						</div>
-						<div class="panel-footer">Footer</div>
 					</div>
 				</div>
 			</div>
@@ -75,7 +72,6 @@
 			<img src={{imgPath}}{{image}} class="img-responsive bordered" id={{i}}>
 			</a>
 						</div>
-						<div class="panel-footer">Footer</div>
 					</div>
 				</div>
 			</div>

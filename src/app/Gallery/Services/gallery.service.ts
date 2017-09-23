@@ -6,22 +6,22 @@ import { Observable } from 'rxjs/Rx';
 @Injectable()
 export class GalleryService {
 
-  private baseUrl: string = 'https://graph.facebook.com/v2.10/';
-  private accessToken: string = 'EAACEdEose0cBAPsFYF9ZBwEZBFfSZBFu4M8PJdTQdtBSc9neVQIw1ZA4ZBlpxcEYxMPSrnZBIYjrsvtHGZAzOK0KRg5ZCRjsmyMI8ZCMbMdu4bxnX9kifzNH3l5FAUaM3mpRtdDqhNFDaDDBx1T49ojZCprwv6oTdMtw0V6RibI5sZAv5wUwFciMIwGZBBoGwKuIoqkZD';
+  private baseUrl = 'http://localhost:8080/BeautyCodeSalon/';
 
   constructor(private http: Http) { }
 
-  getAlbumPhotos(albumId: string): Observable<Array<I.OutFbAlbum>> {
-    let albumPhotosIds = this.baseUrl + albumId + '/photos?' + 'access_token=' + this.accessToken;
-    return this.http.get(albumPhotosIds)
-      .map((res) => res.json().data as Observable<Array<I.OutFbAlbum>>)
-      .catch((error: any) => Observable.throw(error.json().error || 'Fb Server error for gallery: ' + albumId + 'URL: ' + albumPhotosIds));
+  RequestPhotosIds(albumId: string): Observable<Array<I.ResponseAlbum>> {
+    return this.http.get(this.baseUrl + 'album/' + albumId)
+      .map((res: any) => {
+        return <Array<I.ResponseAlbum>>JSON.parse(res._body);
+      });
   }
 
-  getPhotosUrls(photoId: string, photoType: string = 'normal'): Observable<Array<I.OutFbPhoto>> {
-    let photosUrls = this.baseUrl + photoId + '/picture?' + 'type=' + photoType + '&access_token=' + this.accessToken;
-    return this.http.get(photosUrls)
-      .map((res) => res.json().data as Observable<Array<I.OutFbPhoto>>)
-      .catch((error: any) => Observable.throw(error.json().error || 'Fb Server error for photo: ' + photoId + 'URL: ' + photosUrls));
+  RequestPhotoUrl(photoId: string, photoType: string = 'album'): Observable<I.ResponsePhotoUrl> {
+    return this.http.get(this.baseUrl + 'photoUrl/' + photoId + '/' + photoType)
+      .map((res: any) => {
+        return <I.ResponsePhotoUrl>JSON.parse(res._body);
+      });
   }
+
 }
