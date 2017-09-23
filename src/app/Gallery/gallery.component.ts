@@ -9,7 +9,7 @@ import {Observable} from 'rxjs/Rx';
   providers: [GalleryService]
 })
 
-export class GalleryComponent {
+export class GalleryComponent  {
 
   private albums: I.FbAlbum = {
     hairID: '10204426332601677',
