@@ -10,11 +10,70 @@
 			<img src={{imageSrc}} class="img-responsive">
 		</div>
 	</div>-->
-		<div class="row" id="photoGallery">
-			<div *ngFor="let image of images; let i='index+1'" class="thumbs">
-				<a class="grid-item" [routerLink]="['/gallery']" [queryParams]="{ photo: i }">
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" href="#collapse1">HAIR</a>
+					</h4>
+				</div>
+				<div id="collapse1" class="panel-collapse collapse">
+					<div class="row" id="photoGallery">
+						<div *ngFor="let photos of hairAlbum.photos; let i='index+1'" class="thumbs">
+							<a class="grid-item" [routerLink]="['/gallery']" [queryParams]="{ photo: photos.id }">
+						<img *ngIf="photos.photoElements[0]" [src]="photos.photoElements[0]" id={{photos.id}} class="img-responsive bordered">
+						</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" href="#collapse2">LAShES</a>
+					</h4>
+				</div>
+				<div id="collapse2" class="panel-collapse collapse">
+					<div class="row" id="photoGallery">
+						<div *ngFor="let image of images; let i='index+1'" class="thumbs">
+							<a class="grid-item" [routerLink]="['/gallery']" [queryParams]="{ photo: i }">
 			<img src={{imgPath}}{{image}} class="img-responsive bordered" id={{i}}>
 			</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" href="#collapse1">EXTENSIONS</a>
+					</h4>
+				</div>
+				<div id="collapse1" class="panel-collapse collapse">
+					<div class="row" id="photoGallery">
+						<div *ngFor="let image of images; let i='index+1'" class="thumbs">
+							<a class="grid-item" [routerLink]="['/gallery']" [queryParams]="{ photo: i }">
+			<img src={{imgPath}}{{image}} class="img-responsive bordered" id={{i}}>
+			</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" href="#collapse1">NAILS</a>
+					</h4>
+				</div>
+				<div id="collapse1" class="panel-collapse collapse">
+					<div class="row" id="photoGallery">
+						<div *ngFor="let image of images; let i='index+1'" class="thumbs">
+							<a class="grid-item" [routerLink]="['/gallery']" [queryParams]="{ photo: i }">
+			<img src={{imgPath}}{{image}} class="img-responsive bordered" id={{i}}>
+			</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
