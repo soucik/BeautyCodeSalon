@@ -13,30 +13,6 @@ var sysBuilder = require('systemjs-builder');
 var tsc = require('gulp-typescript');
 var runSeq = require('run-sequence');
 
-var fs = require('fs');
-const PATH = require('path');
-var dirTree = require('directory-tree');
-
-gulp.task('imagesPaths', function () {
-
-    var pictures=[];
-    var imagesJson='';
-    var ImagesDir = 'src/img/gallery';
-
-    try {
-    const tree = dirTree(ImagesDir, ['.jpg'], (item, PATH) => {
-        pictures.push(item);
-        //console.log(typeof(pictures));
-    });
-    console.log(pictures);
-        imagesJson=JSON.stringify(pictures);
-        fs.writeFileSync('src/img/gallery/images.json', imagesJson);
-    } 
-    catch (e) {
-        console.log("Cannot write json file with images ", e);
-    }
-});
-
 // Set the banner content
 var banner = ['/*!\n',
     ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
