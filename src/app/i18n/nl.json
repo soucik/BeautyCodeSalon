@@ -215,12 +215,12 @@
   "COMMON": {
     "MENU": {
       "TITLE": "Menu",
-      "HOME": "Titelseite",
+      "HOME": "Home",
       "CONTACT": "Contact",
       "PRICES": "Prijslijst",
       "GALLERY": "Galerie",
       "SERVICES": "Diensten",
-      "LANGUAGE": "Taal"
+      "LANGUAGE": "Language"
     },
     "SOCIAL": {
       "FACEBOOK": "Facebook"
