@@ -43,6 +43,9 @@ h3,
 h5 {
   color: #AA0000;
 }
+h1 {
+  text-align: center;
+}
 h4#context {
   margin: 0 0 20px;
 }
@@ -129,11 +132,15 @@ h4#context {
     -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    padding-bottom: 52px;
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
     background: black;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .navbar-custom img.logo {
+    width: 200px;
   }
 }
 .btn-circle {
@@ -301,4 +308,18 @@ footer p {
 }
 .pricesBg {
   background-color: rgba(0, 0, 0, 0.65);
+}
+.navbarScrolled {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.navbarLanguage {
+  background-color: transparent;
+  color: white;
+  border: 0px;
+  font-size: 18px;
+  padding: 13px 15px 0px 15px;
+  text-transform: uppercase;
+}
+.navbarLanguage .navbarLanguageOption {
+  background-color: black;
 }

@@ -9,7 +9,6 @@ import { PricesComponent } from './Prices/prices.component';
 })
 export class AppComponent {
   name = 'Beauty Code Salon';
-  hero='4454545';
 
 
   constructor(
@@ -20,11 +19,19 @@ export class AppComponent {
     let browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/en|nl/) ? browserLang : 'nl');
 
-
-
     $(document).ready(function () {
       $("body").removeClass('backgrounded');
+
+      var scroll_pos = 0;
+      $(document).scroll(function () {
+        scroll_pos = $(this).scrollTop();
+        if (scroll_pos > 30) {
+          $(".navbar-fixed-top").addClass("navbarScrolled");
+        } else {
+          $(".navbar-fixed-top").removeClass("navbarScrolled");
+        }
+      });
     });
   }
-
+  
 }

@@ -6,7 +6,7 @@
                 </button>
             <a routerLink="home" routerLinkActive="active" class="navbar-brand page-scroll logo">
 
-                <img width="210px" src="img/logos/label-0.png">
+                <img width="100px" src="img/logos/label-0.png" class="logo">
 
             </a>
         </div>
@@ -30,8 +30,8 @@
                     <a routerLink="gallery" routerLinkActive="active" class="page-scroll">{{ 'COMMON.MENU.GALLERY' | translate }}</a>
                 </li>
                 <li>
-                    <select class="form-control" #langSelect (change)="translate.use(langSelect.value)">
-                        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+                    <select class="form-control navbarLanguage" #langSelect (change)="translate.use(langSelect.value)">
+                        <option class="navbarLanguageOption" *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ 'COMMON.MENU.LANGUAGE' | translate }}: {{ lang }}</option>
                     </select>
                 </li>
             </ul>
