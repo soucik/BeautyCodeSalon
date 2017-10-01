@@ -28,7 +28,7 @@
                                 <td>
                                     <div *ngIf="tra[3]">{{tra[3]}}</div>
                                 </td>
-                                <td>{{tra[1]}}</td>
+                                <td>{{tra[1] | currency:'EUR':true:'1.2-2'}}</td>
                             </tr>
                         </tbody>
                         
@@ -58,7 +58,7 @@
                                 <td>
                                     <div *ngIf="tra[3]">{{tra[3]}}</div>
                                 </td>
-                                <td>{{tra[1]}}</td>
+                                <td>{{tra[1] | currency:'EUR':true:'1.2-2'}}</td>
                             </tr>
                         </tbody>
                     </table>
