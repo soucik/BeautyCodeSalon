@@ -10,6 +10,7 @@ import { GalleryService } from './Gallery/Services/gallery.service';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'contact', component: HomeComponent, data:{'scrollTo':'contact'} },
   { path: 'prices', component: PricesComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'gallery/:photo', component: GalleryComponent },

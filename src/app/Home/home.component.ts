@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'my-home',
@@ -20,6 +21,12 @@ export class HomeComponent {
   lat: number = 51.478879;
   lng: number = 5.658821;
 
+  constructor(
+    private route: ActivatedRoute,
+  ) {
+    this.GetUrlParameters();
+  }
+
   clickedMarker(label: string, index: number) {
     console.log(`clicked the marker: ${label || index}`)
   }
@@ -30,7 +37,13 @@ export class HomeComponent {
       label: 'Salon',
       draggable: false
     }
-  ]
+  ];
+
+  GetUrlParameters() {
+    if (this.route.snapshot.data.scrollTo === "contact") { //url contains /contact
+      //TODO: not implemented scrolling to contact target
+    }
+  }
 }
 
 
