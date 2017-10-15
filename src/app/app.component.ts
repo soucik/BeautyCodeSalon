@@ -13,13 +13,17 @@ export class AppComponent {
 
   constructor(
     private translate: TranslateService) {
-    translate.addLangs(["en", "nl"]);
-    translate.setDefaultLang('en');
+    this.translate.addLangs(["en", "nl"]);
+    this.translate.setDefaultLang('en');
 
-    let browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/en|nl/) ? browserLang : 'nl');
+    this.translate.use(this.resolveLanguage());
 
-    $(document).ready(function () {
+    this.translate.onLangChange.subscribe(()=> {
+      localStorage.setItem('choosenLang',this.translate.currentLang);
+    });
+
+    
+    $(document).ready(function () { 
       $("body").removeClass('backgrounded');
 
       var scroll_pos = 0;
@@ -33,5 +37,17 @@ export class AppComponent {
       });
     });
   }
-  
+
+  resolveLanguage(): string{
+    var choosenLangStor = localStorage.getItem("choosenLang");
+    if(choosenLangStor.match(/^en$|^nl$/)) //If user choosed lang before
+    {
+      return choosenLangStor; //return choosed language
+    }
+    else
+    {
+      let browserLang = this.translate.getBrowserLang(); //get browser language
+      return browserLang.match(/en|nl/) ? browserLang : 'nl'; //choose nl language if browser lang is different than en|nl
+    }
+  }
 }
