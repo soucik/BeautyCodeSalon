@@ -40,7 +40,7 @@ export class AppComponent {
 
   resolveLanguage(): string{
     var choosenLangStor = localStorage.getItem("choosenLang");
-    if(choosenLangStor.match(/^en$|^nl$/)) //If user choosed lang before
+    if((choosenLangStor !== undefined) && (choosenLangStor !== null) && choosenLangStor.match(/^en$|^nl$/)) //If user choosed lang before
     {
       return choosenLangStor; //return choosed language
     }
