@@ -8,7 +8,7 @@ var express = require('express')
 
 server.listen(8080);
 
-const keys_private = require('./private/keys_private.js');
+var keys_private = require('./private/keys_private.js');
 
 function ImagesFromIdResolver() {
 	this._baseUrl = 'https://graph.facebook.com/v2.10/';
@@ -83,6 +83,20 @@ app.get('/BeautyCodeSalon/photoUrl/:photoId/:photoType', function (requestClient
 //	http://localhost:8080/login
 app.get('/login', function (req, res) {
 	res.sendfile(__dirname + '/public/login.html');
+});
+var FB = require('fb');
+fb = new FB.Facebook();
+
+app.get('/go', function (req, res) {
+	FB.api('1939772199430717', 'post', { 'message':'body', fields: [], access_token: keys_private.access_token() }, function (res) {
+
+			if (!res || res.error) {
+				console.log(!res ? 'error occurred' : res.error);
+				return;
+			}
+			console.log(res.id);
+			console.log(res.name);
+		});
 });
 
 // usernames which are currently connected to the chat

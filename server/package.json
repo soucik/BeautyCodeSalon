@@ -2,14 +2,15 @@
   "name": "mukhin_chat",
   "description": "example chat application with socket.io",
   "version": "0.0.1",
-    "author": "Palino",
-    "scripts": {
-      "start": "node app.js"
+  "author": "Palino",
+  "scripts": {
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "",
-    "socket.io": "^2.0.3",
+    "fb": "^2.0.0",
     "request": "^2.81.0",
-    "request-promise": "0.1.2"
+    "request-promise": "0.1.2",
+    "socket.io": "^2.0.3"
   }
 }

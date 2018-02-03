@@ -45,9 +45,9 @@ export class PricesComponent implements OnInit {
   getLang(lang: string) {
     this.http.get('app/i18n/' + lang + '.json')
       .toPromise()
-      .then(translation => {
+      .then((translation:any) => {
         return translation.json();
-      }).then(translationJson => {
+      }).then((translationJson: any) => {
         this.prices = translationJson.PRICES;
         // console.log(translationJson.PRICES);
       }
