@@ -1,0 +1,55 @@
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    {{ 'COMMON.MENU.TITLE' | translate }} <i class="fa fa-bars"></i>
+                </button>
+            <a routerLink="home" routerLinkActive="active" class="navbar-brand page-scroll logo">
+
+                <img width="100px" src="img/logos/label-0.png" class="logo">
+
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a [routerLink]="['home']" href="#header" pageScroll routerLinkActive="active" class="page-scroll">{{ 'COMMON.MENU.HOME' | translate }}</a>
+                </li>
+                <li>
+                    <a [routerLink]="['home']" href="#contact" pageScroll routerLinkActive="active" class="page-scroll">{{ 'COMMON.MENU.CONTACT' | translate }}</a>
+                </li>
+                <li>
+                    <a routerLink="prices" routerLinkActive="active" class="page-scroll">{{ 'COMMON.MENU.PRICES' | translate }}</a>
+                </li>
+                <li>
+                    <a routerLink="gallery" routerLinkActive="active" class="page-scroll">{{ 'COMMON.MENU.GALLERY' | translate }}</a>
+                </li>
+                <li>
+                    <select class="form-control navbarLanguage" #langSelect (change)="translate.use(langSelect.value)">
+                        <option class="navbarLanguageOption" *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ 'COMMON.MENU.LANGUAGE' | translate }}: {{ lang }}</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<section>
+    <router-outlet></router-outlet>
+</section>
+<section>
+    <social-component></social-component>
+</section>
+<footer class="container first-content" id="author">
+    <div class="row bgForText">
+        <div class="col-md-12 text-center custom-bg about-author">
+            <p>{{ 'COMMON.COPY.LABEL' | translate }} &copy; 2017</p>
+        </div>
+    </div>
+</footer>

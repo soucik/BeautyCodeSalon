@@ -1,0 +1,185 @@
+<ng-template [ngIf]=" prices "><div class="container first-content" id="prices-header">
+    <div class="backgrounded-inside">
+        <div class="row">{{hero}}
+            <div class="col-md-12  custom-bg">
+                <h1>{{ 'PRICES.TITLE' | translate }}</h1>
+            </div>
+        </div>
+        <div class="row pricesBg">
+            <div class="col-md-10 col-md-offset-1  custom-bg">
+                <div class="table-responsive">
+                    <table class="table">
+                        <caption>{{ 'PRICES.MAN-TITLE' | translate }}</caption>
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>{{ 'PRICES.SERVICE' | translate }}</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                                <th>{{ 'PRICES.PRICE' | translate }}</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr  *ngFor="let tra of prices.MAN; let i = index">
+                                <td>{{tra[0]}}</td>
+                                <td>
+                                    <div *ngIf="tra[2]">{{tra[2]}}</div>
+                                </td>
+                                <td>
+                                    <div *ngIf="tra[3]">{{tra[3]}}</div>
+                                </td>
+                                <td>{{tra[1] | currency:'EUR':true:'1.2-2'}}</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row pricesBg">
+            <div class="col-md-10 col-md-offset-1  custom-bg">
+                <div class="table-responsive">
+                    <table class="table">
+                        <caption>{{ 'PRICES.WOMAN-TITLE' | translate }}</caption>
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>{{ 'PRICES.SERVICE' | translate }}</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                                <th>{{ 'PRICES.PRICE' | translate }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let tra of prices.WOMAN; let i = index">
+                                <td>{{tra[0]}}</td>
+                                <td>
+                                    <div *ngIf="tra[2]">{{tra[2]}}</div>
+                                </td>
+                                <td>
+                                    <div *ngIf="tra[3]">{{tra[3]}}</div>
+                                </td>
+                                <td>{{tra[1] | currency:'EUR':true:'1.2-2'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row pricesBg">
+            <div class="col-md-10 col-md-offset-1  custom-bg">
+                <div class="table-responsive">
+                    <table class="table">
+                        <caption>{{ 'PRICES.CHILDREN-TITLE' | translate }}</caption>
+                        <thead>
+                            <tr>
+                                <th>{{ 'PRICES.SERVICE' | translate }}</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                                <th>{{ 'PRICES.PRICE' | translate }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let tra of prices.CHILDREN; let i = index">
+                                <td>{{tra[0]}}</td>
+                                <td>
+                                    <div *ngIf="tra[2]">{{tra[2]}}</div>
+                                </td>
+                                <td>
+                                    <div *ngIf="tra[3]">{{tra[3]}}</div>
+                                </td>
+                                <td>{{tra[1] | currency:'EUR':true:'1.2-2'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row pricesBg">
+            <div class="col-md-10 col-md-offset-1  custom-bg">
+                <div class="table-responsive">
+                    <table class="table">
+                        <caption>{{ 'PRICES.NAILS-TITLE' | translate }}</caption>
+                        <thead>
+                            <tr>
+                                <th>{{ 'PRICES.SERVICE' | translate }}</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                                <th>{{ 'PRICES.PRICE' | translate }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let tra of prices.NAILS; let i = index">
+                                <td>{{tra[0]}}</td>
+                                <td>
+                                    <div *ngIf="tra[2]">{{tra[2]}}</div>
+                                </td>
+                                <td>
+                                    <div *ngIf="tra[3]">{{tra[3]}}</div>
+                                </td>
+                                <td>{{tra[1] | currency:'EUR':true:'1.2-2'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row pricesBg">
+            <div class="col-md-10 col-md-offset-1  custom-bg">
+                <div class="table-responsive">
+                    <table class="table">
+                        <caption>{{ 'PRICES.WIMPERS-TITLE' | translate }}</caption>
+                        <thead>
+                            <tr>
+                                <th>{{ 'PRICES.SERVICE' | translate }}</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                                <th>{{ 'PRICES.PRICE' | translate }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let tra of prices.WIMPERS; let i = index">
+                                <td>{{tra[0]}}</td>
+                                <td>
+                                    <div *ngIf="tra[2]">{{tra[2]}}</div>
+                                </td>
+                                <td>
+                                    <div *ngIf="tra[3]">{{tra[3]}}</div>
+                                </td>
+                                <td>{{tra[1] | currency:'EUR':true:'1.2-2'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row pricesBg">
+            <div class="col-md-10 col-md-offset-1  custom-bg">
+                <div class="table-responsive">
+                    <table class="table">
+                        <caption>{{ 'PRICES.EXTENSIONS-TITLE' | translate }}</caption>
+                        <thead>
+                            <tr>
+                                <th>{{ 'PRICES.SERVICE' | translate }}</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                                <th>{{ 'PRICES.PRICE' | translate }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let tra of prices.EXTENSIONS; let i = index">
+                                <td>{{tra[0]}}</td>
+                                <td>
+                                    <div *ngIf="tra[2]">{{tra[2]}}</div>
+                                </td>
+                                <td>
+                                    <div *ngIf="tra[3]">{{tra[3]}}</div>
+                                </td>
+                                <td>{{tra[1] | currency:'EUR':true:'1.2-2'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></ng-template>

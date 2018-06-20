@@ -1,0 +1,34 @@
+<article class="container first-content" id="gallery-header">
+	<div class="backgrounded-inside">	
+		<div class="row">
+		<div class="col-md-12 text-center custom-bg">
+			<h1>{{ 'GALLERY.TITLE' | translate }}</h1>
+		</div>
+	</div>
+	<!--<div class="row">
+		<div class="col-md-3 text-center custom-bg" *ngFor="let imageSrc of images4x3Src; let i=index">
+			<img src={{imageSrc}} class="img-responsive">
+		</div>
+	</div>-->
+	<div class="row" id="photoGallery">
+		<div *ngFor="let image of images; let i='index+1'" class="thumbs">
+			<a class="grid-item" [routerLink]="['/gallery']" [queryParams]="{ photo: i }">
+			<img src={{imgPath}}{{image}} class="img-responsive bordered" id={{i}}>
+			</a>
+		</div>
+	</div>
+</div>
+<div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<button type="button" pageScroll class="btn btn-circle page-scroll close hidden" data-dismiss="modal">×</button>
+		<div class="modal-content">
+			<!--<div class="modal-body">-->
+			<img class="imo" src="" alt="" />
+			<!--</div>-->
+		</div>
+	</div>
+</div>
+</article>
+<article>
+<gallery-salon-video></gallery-salon-video>
+</article>
