@@ -313,11 +313,12 @@ footer p {
   background-color: rgba(0, 0, 0, 0.85);
 }
 .navbarLanguage {
+  position: relative;
+  top: 8px;
   background-color: transparent;
   color: white;
   border: 0px;
   font-size: 18px;
-  padding: 13px 15px 0px 15px;
   text-transform: uppercase;
 }
 .navbarLanguage .navbarLanguageOption {
