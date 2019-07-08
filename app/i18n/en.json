@@ -38,6 +38,7 @@
     },
     "PRICES": {
         "TITLE": "Price List",
+        "AVAILABLE": "Actual price list is available in salon",
         "SERVICE": "Service",
         "PRICE": "Price",
         "WOMAN-TITLE": "Ladies cure & Cost",

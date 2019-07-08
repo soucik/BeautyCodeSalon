@@ -38,6 +38,7 @@
     },
     "PRICES": {
         "TITLE": "Prijslist",
+        "AVAILABLE": "De actuele prijslijst is te vinden in de kapsalon",
         "SERVICE": "Service",
         "PRICE": "Prijs",
         "WOMAN-TITLE": "Dames behandeling & Prijzen",
