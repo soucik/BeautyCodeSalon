@@ -1,11 +1,15 @@
 <ng-template [ngIf]=" prices "><div class="container first-content" id="prices-header">
     <div class="backgrounded-inside">
-        <div class="row">{{hero}}
+        <div class="row">
             <div class="col-md-12  custom-bg">
                 <h1>{{ 'PRICES.TITLE' | translate }}</h1>
             </div>
         </div>
-        <h1 class="stamp">{{ 'PRICES.AVAILABLE' | translate }}</h1>
+        <div class="row pricesBg">
+            <div class="col-md-12 custom-bg" style="margin-top: 100px;">
+                <div class="stamp">{{ 'PRICES.AVAILABLE' | translate }}</div>
+            </div>
+        </div>
         <!-- <div class="row pricesBg">
             <div class="col-md-10 col-md-offset-1  custom-bg">
                 <div class="table-responsive">
